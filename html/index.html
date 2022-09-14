@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./html/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.1/moment.min.js"></script>
+    <script src="./html/script.js"></script>
+</head>
+
+<body>
+    <div class="popup-overlay container">
+        <div class="popup-content">
+            <h2 class="popup-header"></h2>
+            <p class="popup-data"></p>
+            <button class="popup-close">Close</button>
+            <button class="popup-add">Add Event</button>
+        </div>
+        <div class="input-form">
+            <form id="add-event">
+                <label>Date</label>
+                <input id="date" type="date">
+                <label>Description</label>
+                <input id="description" type="text">
+                <input type="submit" value="Submit">
+            </form>
+            <button class="close-form">Close form</button>
+        </div>
+    </div>
+
+    <div class="container" id="main">
+        <div class="jumbotron">
+            <h1 class="text-center"><a id="left" href="#"><i class="fa fa-chevron-left"> </i></a><span>&nbsp;</span><span id="month"> </span><span>&nbsp;</span><span id="year"> </span><span>&nbsp;</span><a id="right" href="#"><i class="fa fa-chevron-right"> </i></a></h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1">
+                <table class="table"></table>
+            </div>
+        </div>
+    </div><span id="about"><a href="http://example.com" target="_blank"><i class="fa fa-question-circle"> </i></a></span>
+</body>
+
+</html>

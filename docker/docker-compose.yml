@@ -1,0 +1,38 @@
+version: '3'
+services:
+  nginx:
+    build:
+      context: ./
+      dockerfile: ./nginx/Dockerfile
+    container_name: nginx
+    tty: true
+    ports:
+      - "80:80"
+    volumes:
+      - "../html:/var/www/html:ro"
+      - "../php:/var/www/php"
+
+  php:
+    build:
+      context: ./
+      dockerfile: ./php/Dockerfile
+    container_name: php
+    tty: true
+    volumes:
+      - "../php:/var/www/php"
+  
+  mysql:
+    image: mysql:8
+    container_name: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=test
+      - MYSQL_DATABASE=calendar
+      - MYSQL_USER=test
+      - MYSQL_PASSWORD=test
+    volumes:
+      - sql_data:/var/lib/mysql
+
+volumes:
+  sql_data:

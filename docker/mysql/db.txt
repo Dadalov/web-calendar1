@@ -1,0 +1,6 @@
+create table events (
+    id int auto_increment,
+    event_date date,
+    description text null,
+    primary key (id)
+);
